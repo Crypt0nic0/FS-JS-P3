@@ -117,3 +117,29 @@ document.body.addEventListener("click", (e) => {
             null;
     }
 });
+
+
+//---------------METHODES STRING---------------
+let string2 = "Javascript est un langage orienté objet";
+console.log(typeof string2);
+console.log(eval(1 + 2));
+console.log(eval(parseInt("1") + 2));
+console.log(isNaN("48"));
+console.log(string2.length);
+console.log(string2[string2.length - 1]);
+
+console.log(string2.indexOf("langage"));
+console.log(string2.indexOf("x")); // Retourne -1 s'il ne connait pas
+
+let newString = string2.slice(2);
+console.log(string2);
+console.log(newString);
+let newString2 = string2.slice(5,17);
+console.log(newString2);
+
+console.log(string2.split(" "));
+
+console.log(string2.toLowerCase());
+console.log(string2.toUpperCase());
+
+console.log(string2.replace("Javascript", "PHP"));
