@@ -252,7 +252,7 @@ let timestamp = Date.parse(date);
 console.log(timestamp);
 
 // IsoString
-console.log(date.toISOString());
+let iso = date.toISOString();
 
 function dateParser(chaine) {
     let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
@@ -270,3 +270,30 @@ console.log(dateParser(date));
 console.log(dateParser(timestamp));
 
 
+
+
+
+//====================================================//
+//====================DESTRUCT========================//
+
+let moreData = {
+    destVar: ["Element 1", "Element 2"],
+};
+
+const { destVar } = moreData;
+
+console.log(moreData.destVar);
+console.log(destVar);
+
+let array5 = [70, 80 ,90];
+let [x, y, z] = array5;
+console.log(x);
+
+console.log(iso);
+const dateDestructuring = (chaine) => {
+    let newDate = chaine.split('T')[0];
+    let [y, m, d] = newDate.split("-");
+    return [d, m, y].join("/");
+}
+
+console.log(dateDestructuring(iso));
