@@ -234,3 +234,39 @@ document.body.innerHTML += data
         </div>
     `)
     .join("");
+
+
+
+
+
+
+
+//====================================================//
+//====================LES DATES=======================//
+
+// Date classique
+let date = new Date();
+
+// Timestamp
+let timestamp = Date.parse(date);
+console.log(timestamp);
+
+// IsoString
+console.log(date.toISOString());
+
+function dateParser(chaine) {
+    let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric"
+    });
+
+    return newDate;
+};
+
+console.log(dateParser(date));
+console.log(dateParser(timestamp));
+
+
