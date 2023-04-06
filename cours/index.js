@@ -217,4 +217,20 @@ console.log(arrayNumber.sort());
 console.log(arrayNumber.sort((a,b) => b - a));
 console.log(arrayNumber.sort((a,b) => a - b));
 
-document.body.innerHTML = arrayNumber.map((number) => `<li> ${number} </li>`).join("");
+document.body.innerHTML += arrayNumber.map((number) => `<li> ${number} </li>`).join("");
+
+
+
+//---------------METHODES OBJETS---------------
+document.body.innerHTML += data
+    .filter((user) => user.admin === false)
+    .sort((a,b) => b.age - a.age)
+    .map((user) => 
+    `
+        <div class="user-card">
+            <h2>${user.pseudo}</h2>
+            <p>Age : ${user.age} ans</p>
+            <p>Statut : ${user.admin ? "Modérateur" : "Membre"}</p>
+        </div>
+    `)
+    .join("");
