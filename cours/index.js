@@ -163,3 +163,58 @@ console.log(Math.pow(2,7)); // Puissance
 console.log(Math.sqrt(16)); // Racine carré
 
 console.log(Math.floor(Math.random() * 50));
+
+
+
+//---------------METHODES TABLEAUX---------------
+let array3 = ["JavaScript", "Php", "Python"];
+let array4 = ["Ruby", "Solidity"];
+
+console.log(array3 + array4);
+console.log(array3.concat(array4));
+
+console.log([array3, array4]);
+console.log([...array3, ...array4]);
+
+console.log(array3.join(" - "));
+
+console.log(array3.slice(1));
+console.log(array3.slice(2,3));
+
+console.log(array3.indexOf("Python"));
+
+array3.forEach((languages) => console.log(languages));
+
+console.log(array3.every((language) => language === "Php")); // Est-ce que dans chaque élement du tableau il y a "Php"
+console.log(array3.some((language) => language === "Php")); // Est-ce que dans un des élément il y a "Php"
+
+// Enlever le premier élément
+let shift = array3.shift();
+console.log(shift);
+console.log(array3);
+
+// Enlever le dernier élément
+console.log(array3.pop());
+
+
+const restArray = array3.splice(1, 1, "C++");
+console.log(restArray);
+console.log(array3);
+
+
+
+// !!!! IMPORTANT !!!! //
+let arrayNumber = [4, 74, 28 ,12, 1];
+console.log(arrayNumber.reduce((x,y) => x + y));
+
+arrayNumber.push(17);
+console.log(arrayNumber);
+
+// FILTER / SORT / MAP
+console.log(arrayNumber.filter((number) => number > 10));
+
+console.log(arrayNumber.sort());
+console.log(arrayNumber.sort((a,b) => b - a));
+console.log(arrayNumber.sort((a,b) => a - b));
+
+document.body.innerHTML = arrayNumber.map((number) => `<li> ${number} </li>`).join("");
