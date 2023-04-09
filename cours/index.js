@@ -307,3 +307,27 @@ console.log(h3js.dataset.lang);
 
 const h3 = document.querySelectorAll("h3");
 h3.forEach((language) => console.log(language.dataset.lang));
+
+
+//====================================================//
+//====================LES REGEX=======================//
+
+let mail = "from_scratch33@gmail.com";
+console.log(mail.search(/frscccrecom/));
+console.log(mail.replace(/from/, "de"));
+console.log(mail.match(/SCratch/));
+console.log(mail.match(/SCratch/i));
+console.log(mail.match(/[zug]/));
+
+//Tous les chiffres
+console.log(mail.match(/\d/));
+
+//Toutes les lettres
+console.log(mail.match(/[a-z]/));
+
+// Regex complete pour les email
+console.log(mail.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i));
+
+// Regex separateur milliers
+let separator = 265264849;
+console.log(separator.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
